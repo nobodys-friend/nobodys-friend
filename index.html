@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NOBODY’s FRIEND</title>
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: #00ffcc;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+h1 {
+  font-size: 3em;
+  position: relative;
+  animation: glitch 1.5s infinite;
+}
+h1::before,
+h1::after {
+  content: "NOBODY’s FRIEND";
+  position: absolute;
+  left: 0;
+}
+h1::before {
+  color: #ff00ff;
+  top: -2px;
+  animation: glitch 1s infinite;
+}
+h1::after {
+  color: #00ffff;
+  top: 2px;
+  animation: glitch 0.8s infinite;
+}
+h2 {
+  margin-top: 20px;
+  color: #888;
+  letter-spacing: 4px;
+  animation: blink 1.2s infinite;
+}
+@keyframes glitch {
+  0% { transform: none; }
+  20% { transform: skew(-5deg); }
+  40% { transform: skew(5deg); }
+  60% { transform: none; }
+  100% { transform: none; }
+}
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}
+</style>
+</head>
+<body>
+  <h1>NOBODY’s FRIEND</h1>
+  <h2>UNDER CONSTRUCTION</h2>
+</body>
+</html>
